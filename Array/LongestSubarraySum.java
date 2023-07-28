@@ -19,9 +19,9 @@ public class LongestSubarraySum {
       
 
         int maxLength = 0;
-        int sum = 0;
-
+        
         for(int i=0; i<arr.length; i++) {
+            int sum = 0;
             for(int j=i; j<arr.length; j++) {
                 
                 sum += arr[j];
@@ -64,7 +64,7 @@ public class LongestSubarraySum {
     public static void main(String args[]) {
         int arr[] = {2,3,5,1,9};
         int K=10;
-        // System.out.println(bruteForce(arr, K));   
+        System.out.println(bruteForce(arr, K));   
         System.out.println(naiveApproach(arr, K));
         System.out.println(OptimalApproach(arr, K));
     }
