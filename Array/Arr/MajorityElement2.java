@@ -3,7 +3,7 @@ import java.util.*;
 public class MajorityElement2 {
     public static ArrayList<Integer> majorityElement(int[] nums) {
         int count1 = 0;
-        int count2 = 0;
+        int count2 = 0; //{1,2,2,3,2};
 
         int ele1 = Integer.MIN_VALUE;
         int ele2 = Integer.MIN_VALUE;

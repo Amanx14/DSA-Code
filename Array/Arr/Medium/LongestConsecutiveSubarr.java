@@ -21,6 +21,28 @@ public class LongestConsecutiveSubarr {
         return maxLength;
     }
 
+    public static int longestSuccessiveElements(int []arr) {
+        Arrays.sort(arr);
+        
+        int count = 1;
+        int maxCount = 0;
+        
+        for(int i=0; i<arr.length-1; i++) {
+            if(arr[i] == arr[i+1]) {
+                continue;
+            }
+            
+            if(arr[i]+1 == arr[i+1]) {
+                count++;
+            }
+            else {
+                count = 1;
+            }
+            maxCount = Math.max(count, maxCount);
+        }
+        return maxCount;
+    }
+
     public static int lcsOptimized(int arr[]) {
         HashSet<Integer> set = new HashSet<>();
 

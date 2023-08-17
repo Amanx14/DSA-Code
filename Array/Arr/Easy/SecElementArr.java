@@ -51,8 +51,8 @@ public class SecElementArr {
     public static void main(String args[]) {
         int arr[] = {1,1,2,6,6,4,5,5};
 
-        // getSecondOrderElements(arr.length, arr);
-        secElementsOptimized(arr);
+        getSecondOrderElements(arr.length, arr);
+        // secElementsOptimized(arr);
 
         
       

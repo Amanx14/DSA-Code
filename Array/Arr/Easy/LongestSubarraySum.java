@@ -1,6 +1,7 @@
 public class LongestSubarraySum {
     public static int bruteForce (int arr[], int K) {
         int maxLength = 0;
+
         for(int i=0; i<arr.length; i++) {
             for(int j=i; j<arr.length; j++) {
                 int sum = 0;
@@ -16,8 +17,6 @@ public class LongestSubarraySum {
     }
 
     public static int naiveApproach(int arr[], int k) {
-      
-
         int maxLength = 0;
         
         for(int i=0; i<arr.length; i++) {

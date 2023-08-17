@@ -3,9 +3,9 @@ import java.util.HashMap;
 public class MissingNumber {
     public static int bruteForce(int arr[], int N) {
         
-        for(int i=1; i<=N; i++) {
-            int flag = 0;
-            for(int j=0; j<arr.length; j++) {
+        for(int i=1; i<=N; i++) { // i -> 1 2 3 4 5
+            int flag = 0; 
+            for(int j=0; j<arr.length; j++) { //arr -> 1 2 4 5
                 if(i == arr[j]) {
                     flag = 1;
                     break;

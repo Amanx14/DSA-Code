@@ -36,7 +36,7 @@ public class MaxProductSubarray {
         int prefix = 1, suffix = 1;
         int maxProduct = 0;
 
-        for(int i=0; i<n; i++) {
+        for(int i=0; i<n; i++) { // {1,2,-3,0,-4,-5}
             if(prefix == 0) {
                 prefix = 1;
             }

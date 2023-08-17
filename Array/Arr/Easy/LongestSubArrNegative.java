@@ -10,7 +10,7 @@ public class LongestSubArrNegative {
         for(int i=0; i<arr.length; i++) {
             sum += arr[i];
 
-            if(sum == k) {
+            if(sum == k) { // if pehle hi koi match ho jaye toh
                 maxLength = Math.max(maxLength, i+1);
             }
 

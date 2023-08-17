@@ -20,9 +20,9 @@ public class FreqCount {
     }
 
     public static void countFrequency(int arr[]) {
-        boolean visited[] = new boolean[arr.length];
+        boolean visited[] = new boolean[arr.length]; 
 
-        for(int i=0; i<arr.length; i++) {
+        for(int i=0; i<arr.length; i++) { // 10, 5, 10, 15, 10, 5
             
             if(visited[i] == true) {
                 continue;
