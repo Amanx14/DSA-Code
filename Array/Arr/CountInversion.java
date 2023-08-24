@@ -32,7 +32,7 @@ public class CountInversion {
             else {
                 //right is smaller
                 merged[x] = arr[idx2];
-                count += (mid - idx1 + 1);
+                count += (mid - idx1 + 1); // --- 
                 x++; idx2++;
             }
         }

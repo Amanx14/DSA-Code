@@ -12,7 +12,7 @@ public class LeftRotateByOne {
         }
     }
 
-    public static void leftRotateByK(int arr[], int K, int n) {
+    public static void leftRotateByK(int arr[], int K, int n) { // 1,2,3,4,5,6,7
         int temp[] = new int[K];
         
         for(int i=0; i<K; i++) {
@@ -27,15 +27,15 @@ public class LeftRotateByOne {
         }
     }
 
-    public static void rightRotatebyK(int arr[], int K, int n) {
+    public static void rightRotatebyK(int arr[], int K, int n) {  // 1,2,3,4,5,6,7
         
-        int temp[] = new int[K];
+        int temp[] = new int[K]; 
         
         for(int i=n-K; i<n; i++) {
             temp[i-n+K] = arr[i];
         }
 
-        for(int i=0; i<n-K; i++) {
+        for(int i=n-K-1; i>=0; i--) {
             arr[i+K] = arr[i];
         }
 

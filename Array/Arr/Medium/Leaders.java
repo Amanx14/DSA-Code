@@ -31,8 +31,6 @@ public class Leaders {
                 ans.add(arr[i]);
                 max = arr[i];
             }
-            
-            
         }
 
         return ans;

@@ -46,8 +46,8 @@ public class SetMatrixZero {
             }
         }
 
-        for(int i=0; i<n; i++) {
-            for(int j=0; j<m; j++) {
+        for(int i=0; i<row.length; i++) {
+            for(int j=0; j<col.length; j++) {
                 if(row[i] == 1 || col[j] == 1) {
                     arr[i][j] = 0;
                 }
@@ -78,7 +78,7 @@ public class SetMatrixZero {
                 if(arr[i][0] == 0 || arr[0][j] == 0) {
                     arr[i][j] = 0;
                 }
-            }
+            } 
         }
 
         if(arr[0][0] == 0) {
