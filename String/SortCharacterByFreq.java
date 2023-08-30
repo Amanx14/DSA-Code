@@ -22,6 +22,7 @@ class Solution {
             bucket[freq].add(key);
         }
 
+        //travering on the bucket array
         StringBuilder sb = new StringBuilder();
         for(int pos=bucket.length-1; pos>=0; pos--) {
             if(bucket[pos] != null) {

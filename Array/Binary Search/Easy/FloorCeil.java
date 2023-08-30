@@ -6,7 +6,7 @@ public class FloorCeil {
         int ceil = -1;
         for(int i=0; i<n; i++) {
             //floor
-            if(arr[n-i-1] <= x) {
+            if(floor == -1 && arr[n-i-1] <= x) {
                 floor = arr[n-i-1];
             }
 
@@ -62,7 +62,7 @@ public class FloorCeil {
     }
 
     public static void main(String args[]) {
-        int arr[] = {3,4,4,7,8,10}, x = 5;
+        int arr[] = {3,4,4,7,8,10}, x = 8;
 
         int ans[] = getFloorAndCeil(arr, arr.length, x);
         
