@@ -21,7 +21,7 @@ public class FindRoot {
                 ans = mid;
                 low = mid + 1;
             }
-            else if(mid * mid > n){
+            else {
                 high = mid - 1;
             }
         }
@@ -65,10 +65,10 @@ public class FindRoot {
     }
     public static void main(String[] args) {
 
-        // int n = 22;
-        // System.out.println(sqrt(n));
+        int n = 22;
+        System.out.println(sqrt(n));
 
-        int N = 3, M = 27;
-        System.out.println(NthRoot(N, M));
+        // int N = 3, M = 27;
+        // // System.out.println(NthRoot(N, M));
     }
 }

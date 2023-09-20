@@ -34,27 +34,48 @@ public class SecElementArr {
     }
 
     public static void secElementsOptimized(int arr[]) {
-        int small = Integer.MAX_VALUE;
-        int secSmall = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int secMax = Integer.MIN_VALUE;
 
         for(int i=0; i<arr.length; i++) {
-            if(arr[i] < small) {
-                secSmall = small;
-                small = arr[i];
+            if(arr[i] > max) {
+                secMax = max;
+                max = arr[i];
             }
-            else if(arr[i] < secSmall && arr[i] != small){
-                secSmall =arr[i];
+            else if(arr[i] > secMax && arr[i] != max){
+                secMax = arr[i];
             }
         }
-        System.out.println(secSmall);
+        System.out.println(secMax);
+    }
+
+    public static int thirdMax(int[] nums) {
+        long max = Long.MIN_VALUE, secMax = Long.MIN_VALUE, thirdMax = Long.MIN_VALUE;
+
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] > max) {
+                thirdMax = secMax;
+                secMax = max;
+                max = nums[i];
+            }
+            else if(nums[i] > secMax && nums[i] != max) {
+                thirdMax = secMax;
+                secMax = nums[i];
+            }
+            else if(nums[i] > thirdMax && nums[i] != max && nums[i] != secMax){
+                thirdMax = nums[i];
+            }
+        }
+
+        if(thirdMax == Long.MIN_VALUE) {
+            return (int)max;
+        }
+        return (int)thirdMax;
     }
     public static void main(String args[]) {
         int arr[] = {1,1,2,6,6,4,5,5};
 
-        getSecondOrderElements(arr.length, arr);
-        // secElementsOptimized(arr);
-
-        
-      
+        // getSecondOrderElements(arr.length, arr);
+        secElementsOptimized(arr);
     }
 }

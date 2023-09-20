@@ -6,10 +6,7 @@ public class Leaders {
 
         for(int i=0; i<arr.length; i++) {
             int j=i+1;
-            while(j < arr.length) {
-                if(arr[i] < arr[j]) {
-                    break;
-                }
+            while(j < arr.length && arr[i] > arr[j]) {
                 j++;
             }
             if(j == arr.length) {
@@ -38,8 +35,8 @@ public class Leaders {
 
     public static void main(String[] args) {
         int arr[] = {1,2,3,2};
-
-        ArrayList<Integer> ans = superiorElements(arr);
-        System.out.println(ans);
+        leaders(arr);
+        // ArrayList<Integer> ans = superiorElements(arr);
+        // System.out.println(ans);
     }
 }

@@ -110,7 +110,7 @@ public class SinglyLL {
     }
 
     public static Node removeNthFromEnd(Node head, int n) {
-        Node dummy = new ListNode();
+        Node dummy = new Node(-1);
         dummy.next = head;
 
         Node fast = dummy;
@@ -128,6 +128,32 @@ public class SinglyLL {
         slow.next = slow.next.next;
 
         return dummy.next;
+    }
+
+    public static ListNode deleteMiddle(ListNode head) {
+        ListNode temp = head;
+        int size = 0;
+
+        while(temp != null) {
+            size++;
+            temp= temp.next;
+        }
+
+        if(size == 1) {
+            return null;
+        }
+
+        temp = head;
+        int idx = 0;
+
+        while(idx < (size/2)-1) {
+            temp = temp.next;
+            idx++;
+        }
+
+        temp.next = temp.next.next;
+        return head;
+
     }
 
     public static void main(String args[]) {
