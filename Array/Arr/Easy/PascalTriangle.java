@@ -36,7 +36,7 @@ public class PascalTriangle {
                     temp.add(ans.get(j-1) + ans.get(j-2));
                 }
             }
-            ans = temp;
+            ans = temp; // ans array ko update karna
         }
         return ans;
     }
