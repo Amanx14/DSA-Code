@@ -68,24 +68,25 @@ public class DoublyLL {
     }
 
     public static Node reverseDLL(Node head) {
-        Node temp = null;
+        Node prev = null;
         Node curr = head;
+        Node next = null;
 
         /*
          * swap next and prev for all nodes of
          * doubly linked list
          */
         while (curr != null) {
-            temp = curr.prev;
-            curr.prev = curr.next;
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
 
-            curr.next = temp;
-            curr = curr.prev;
+            prev = curr;
+            curr = next;
         } 
 
         // Edge case if our linked list is empty Or list with only one node
-        if (temp != null)
-            head = temp.prev;
+        head = prev;
         return head;
     }
 
@@ -121,8 +122,9 @@ public class DoublyLL {
 
         print(head);System.out.println();
 
-        deleteLastNode(head);
-        print(head);
+        Node newHead = reverseDLL(head);
+        // deleteLastNode(head);
+        print(newHead);
 
     }
 }
