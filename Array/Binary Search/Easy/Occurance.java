@@ -33,12 +33,9 @@ public class Occurance {
         while(start <= end) {
             int mid = start + (end - start) / 2;
 
-            if(nums[mid] == target) {
+            if(nums[mid] <= target) {
                 posIdx = mid;
                 start = mid+1;
-            }
-            else if(nums[mid] > target) {
-                end = mid - 1;
             }
             else {
                 start = mid + 1;
@@ -55,12 +52,9 @@ public class Occurance {
         while(start <= end) {
             int mid = start + (end - start) / 2;
 
-            if(nums[mid] == target) {
+            if(nums[mid] >= target) {
                 posIdx = mid;
                 end = mid-1;
-            }
-            else if(nums[mid] > target) {
-                end = mid - 1;
             }
             else {
                 start = mid + 1;
@@ -78,7 +72,7 @@ public class Occurance {
     }
 
     public static void main(String args[]) {
-        int arr[] = {5,7,7,8,8,10};
+        int arr[] = {5,7,7,8,8,8,8,10};
         // int ans[] = findPos(arr, 8);
         int ans2[] = searchRange(arr, 8);
 

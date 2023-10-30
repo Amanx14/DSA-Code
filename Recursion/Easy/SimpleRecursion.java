@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Simple {
+public class SimpleRecursion {
     public static void swap(int arr[], int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
